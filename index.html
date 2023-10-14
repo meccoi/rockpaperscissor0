@@ -1,0 +1,108 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="/dist/output.css" rel="stylesheet">
+  <link href="src/style.css" rel="stylesheet">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script src="index.js"></script>
+</head>
+<body>
+    <div class="bg-black"></div>
+    <style>
+        .container{
+        max-width: 700px;
+        }
+      </style>
+<div class="wrap">
+    <div class="container mx-auto">
+        <div class="wrapper p2 lg:pt-12 flex flex-col gap-14">
+    
+            <div class="header a flex justify-between rounded-2xl p-5 ">
+                <div class="header-text">
+                    <img src="images/logo.svg" alt="">
+                </div>
+                <div class="header-score flex flex-col justify-center items-center px-9 rounded-md">
+                    <p class="text-sm font-bold">SCORE</p>
+                    <h2 id="textscore" class="font-bold text-6xl">0</h2>
+                </div>
+            </div>
+    <!-- aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa  -->
+            <div class="main a relative">
+                <section class="select">
+                    <div class="main-bg">
+                        <img src="images/bg-triangle.svg" alt="">
+                    </div>
+        
+                    <div class="hand">
+                        <div id="hand-group" class="hand-group flex justify-around px-0 lg:px-20 hand-2 ">
+                            <div id="paper" class="hand-item">
+                                <img src="images/icon-paper.svg">
+                            </div>
+                            <div id="scissor" class="hand-item">
+                                <img src="images/icon-scissors.svg" alt="">
+                            </div>
+                        </div>
+                        <div  id="hand-group" class="hand-group flex justify-center mt-14 lg:mt-0 ">
+                            <div id="rock" class="hand-item">
+                                <img src="images/icon-rock.svg" alt="">
+                            </div>
+                        </div>
+                    </div>
+                </section>
+    
+                <section class="result flex justify-around hidden relative">
+    
+                    <div class="player-choose flex flex-col text-center justify-center items-center gap-9 relative">
+                        <div class="player-text">
+                            <h2 class="text-white font-medium">YOU PICKED</h2>
+                        </div>
+                        <div class="p-hand" id="p-hand">
+                            <img src="images/icon-rock.svg" alt="">
+                        </div>
+                    </div>
+    
+                    <div class="p-result flex flex-col self-center items-center gap-5 hidden">
+                        <h2 class="text-white font-bold text-4xl">YOU WIN</h2>
+                        <button id="playagainbtn" class="bg-white rounded p-2 px-6 hover:text-red-700 font-medium">Play again</button>
+                    </div>
+    
+                    <div class="loading pulse-element"></div>
+                        <div id="computerTurn" class="player-choose  flex flex-col text-center items-center gap-9 relative opacity-0">
+                            <div class="player-text">
+                                <h2 class="text-white font-medium">THE HOUSE PICKED</h2>
+                            </div>
+                            <div class="c-hand">
+                                <img src="images/icon-rock.svg" alt="">
+                            </div>
+                        </div>
+    
+                </section>
+                
+            </div>
+    
+    
+    
+        </div>
+    </div>
+    
+    <footer class="site-footer flex flex-col lg:grid grid-cols-2 place-items-center justify-between items-center gap-5 pb-4">
+        <p class="attribution text-white">Challenge by <a class="attribution__link" href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>.
+       Coded by <a class="attribution__link" href="https://github.com/meccoi" target="_blank">meccoi</a>.</p>
+       <div class="btns">
+           <button class="btn-reset mr-5 p-2 px-9 rounded bg-none border-2 border-gray-300 text-white hover:bg-white hover:text-black" aria-label="Reset">RESET</button>
+           <button class="btn-rules p-2 px-9 rounded bg-none border-2 border-gray-300 text-white hover:bg-white hover:text-black" aria-label="Rules">RULES</button>
+           <div class="rules-modal flex flex-col justify-center items-center">
+             <div class="rules-modal__content relative ">
+               <img class="rules-modal__content--close" src="images/icon-close.svg" alt="Games Rules Close">
+               <img class="rules-modal__content--img" src="images/image-rules.svg" alt="Game Rules">
+             </div>
+           </div>
+    
+       </div>
+    </footer>
+</div>
+
+</body>
+</html>
